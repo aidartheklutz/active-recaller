@@ -1,7 +1,237 @@
-.hidden {
-    display: none;
+.writing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.results {
-    display: block;
+.writing-input-mode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-height: 60vh;
+}
+
+.writing-input-mode h2 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+#recallTextarea {
+    width: 85%;
+    max-width: 1000px;
+    height: 45vh;
+    border: none;
+    border-radius: 20px;
+    padding: 24px;
+    font-size: 1.15rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #1a1a1a;
+    line-height: 1.6;
+    transition: box-shadow 0.3s ease;
+}
+
+#recallTextarea:focus {
+    outline: 2px solid var(--link);
+    box-shadow: 0 8px 30px rgba(161, 149, 243, 0.2);
+}
+
+.writing-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.action-btn {
+    padding: 12px 32px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    
+}
+
+.secondary-btn {
+    background-color: transparent !important;
+    border: 2px solid var(--link) !important;
+    color: var(--link) !important;
+}
+
+.secondary-btn:hover {
+    background-color: rgba(161, 149, 243, 0.15) !important;
+}
+
+.writing-results-mode {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    align-items: flex-start;
+}
+
+.results-left {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    font-family: "Comic Relief", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.results-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.recall-paper {
+    white-space: pre-wrap;
+    color: var(--black);
+    padding: 30px;
+    background-image: url('../../assets/paper.jpg');
+    background-repeat: repeat;
+    min-height: 40vh;
+    border-radius: 20px;
+    word-break: keep-all;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.results-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.feedback-window {
+    background-color: var(--accent-1);
+    border-radius: 20px;
+    padding: 30px;
+    min-height: 40vh;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.feedback-content h2 {
+    font-size: 1.4rem;
+    border-bottom: 2px solid #250312;
+    padding-bottom: 8px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+.feedback-content h2:first-of-type {
+    margin-top: 0;
+}
+
+.feedback-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.feedback-content li {
+    padding: 8px 0;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    line-height: 1.4;
+    color: var(--white);
+}
+
+.correct-item i {
+    color: #2ecc71;
+    font-size: 1.1rem;
+}
+
+.incorrect-item i {
+    color: #e74c3c;
+    font-size: 1.1rem;
+}
+
+.missing-item i {
+    color: #f1c40f;
+    font-size: 1.1rem;
+}
+
+.hallucination-item i {
+    color: #9b59b6;
+    font-size: 1.1rem;
+}
+
+.empty-msg {
+    color: #aaa;
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+.feedback-error {
+    color: #e74c3c;
+}
+
+.raw-response {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    color: #eee;
+}
+
+/* Loading animations */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 30vh;
+    text-align: center;
+}
+
+.loading-text {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--link);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.loading-text::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    text-align: left;
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: ''; }
+    40% { content: '.'; }
+    60% { content: '..'; }
+    80%, 100% { content: '...'; }
+}
+
+/* Responsive grid for mobile/tablet view */
+@media (max-width: 900px) {
+    .writing-input-mode {
+        width: 100%;
+        min-height: 50vh;
+    }
+    
+    #recallTextarea {
+        width: 100%;
+        height: 45vh;
+        padding: 16px;
+    }
+    
+    .writing-results-mode {
+        flex-direction: column;
+        gap: 30px;
+    }
 }

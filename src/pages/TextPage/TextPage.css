@@ -1,0 +1,29 @@
+#paper {
+    white-space: pre-wrap;
+    color: var(--black);
+    padding: 30px;
+    background-image: url('../../assets/paper.jpg');
+    background-repeat: repeat;
+    min-height: 30vh;
+    border-radius: 20px;
+    width: 50%;
+    word-break:keep-all
+}
+
+.reading {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.explanation {
+    width: 50%;
+}
+
+@media (max-width: 1100px) {
+    .reading {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+}

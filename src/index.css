@@ -1,0 +1,65 @@
+body, html {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+:root {
+  --default-font-size: 25px;
+  --accent: #f05d8e;
+  --accent-1: #750b37;
+  --link: #fe92e7;
+  --link-1: #d474d0;
+  --background-color: #5e083c;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--white);
+}
+
+body, textarea, input, button {
+  font-family: "Podkova", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+button {
+  background-color: var(--link);
+  color: var(--background-color);
+  border: none;
+  padding: 8px 16px;
+  font-size: 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--link-1);
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+textarea {
+  resize: none;
+}
+
+a {
+  color: var(--link);
+  transition: color 1s ease;
+}
+
+a:hover {
+  color: var(--link-1);
+  cursor: pointer;
+}
+
+.content {
+  margin-top: 110px;
+  padding: 20px;
+}

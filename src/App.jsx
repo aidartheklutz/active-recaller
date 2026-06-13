@@ -3,6 +3,8 @@ import { Route, Routes } from "react-router";
 import HomePage from "./pages/HomePage/HomePage";
 import TextPage from "./pages/TextPage/TextPage";
 import WritingPage from "./pages/WritingPage/WritingPage";
+import AboutPage from "./pages/AboutPage/AboutPage";
+import NavBar from "./components/NavBar";
 
 function App() {
   const [keyPoints, setKeyPoints] = useState(() => {
@@ -30,39 +32,48 @@ function App() {
   }, [lastProcessedText]);
 
   return (
-    <Routes>
-      <Route
-        index
-        element={
-          <HomePage
-            originalText={originalText}
-            setOriginalText={setOriginalText}
+    <>
+      <NavBar />
+      <div className="content">
+        <Routes>
+          <Route
+            index
+            element={
+              <HomePage
+                originalText={originalText}
+                setOriginalText={setOriginalText}
+              />
+            }
           />
-        }
-      />
-      <Route
-        path="/text"
-        element={
-          <TextPage
-            originalText={originalText}
-            setKeyPoints={setKeyPoints}
-            keyPoints={keyPoints}
-            lastProcessedText={lastProcessedText}
-            setLastProcessedText={setLastProcessedText}
+          <Route
+            path="/text"
+            element={
+              <TextPage
+                originalText={originalText}
+                setKeyPoints={setKeyPoints}
+                keyPoints={keyPoints}
+                lastProcessedText={lastProcessedText}
+                setLastProcessedText={setLastProcessedText}
+              />
+            }
           />
-        }
-      />
-      <Route
-        path="/text/writing"
-        element={
-          <WritingPage
-            originalText={originalText}
-            setKeyPoints={setKeyPoints}
-            keyPoints={keyPoints}
+          <Route
+            path="/text/writing"
+            element={
+              <WritingPage
+                originalText={originalText}
+                setKeyPoints={setKeyPoints}
+                keyPoints={keyPoints}
+              />
+            }
           />
-        }
-      />
-    </Routes>
+          <Route
+            path="/about"
+            element={<AboutPage />}
+          />
+        </Routes>
+      </div>
+    </>
   );
 }
 

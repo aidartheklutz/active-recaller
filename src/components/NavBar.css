@@ -1,0 +1,102 @@
+/* =========================
+   NAVBAR (reusing from tsitools.vercel.app btw)
+========================= */
+
+.navbar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--accent);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 5vw;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-content {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.nav-logo img {
+    height: 42px;
+    width: auto;
+}
+
+.nav-logo h1 {
+    font-size: 1.55rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.02em;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.nav-logo h1:hover, .nav-logo p:hover {
+    color: var(--white);
+    transform: scale(1.08);
+}
+
+.nav-logo p {
+    font-size: 0.95rem;
+    margin: 0;
+    opacity: 0.85;
+    line-height: 1.1;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.8rem;
+    align-items: center;
+}
+
+.navbarLink {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.navbarLink:hover {
+    color: var(--link);
+    transform: scale(1.15);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .navbar-wrapper {
+        height: 62px;
+        padding: 0 4vw;
+    }
+    
+    .nav-logo img {
+        height: 36px;
+    }
+    
+    .nav-logo h1 {
+        font-size: 1.35rem;
+    }
+    
+    .nav-logo p {
+        display: none;
+    }
+    
+    .nav-links {
+        gap: 1.2rem;
+    }
+}
