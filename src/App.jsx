@@ -5,7 +5,14 @@ import TextPage from "./pages/TextPage/TextPage";
 import WritingPage from "./pages/WritingPage/WritingPage";
 
 function App() {
-  const [keyPoints, setKeyPoints] = useState(null);
+  const [keyPoints, setKeyPoints] = useState(() => {
+    return localStorage.getItem("keyPoints") || "";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("keyPoints", keyPoints);
+  }, [keyPoints]);
+
   const [originalText, setOriginalText] = useState(() => {
     return localStorage.getItem("text") || "";
   });
@@ -13,6 +20,14 @@ function App() {
   useEffect(() => {
     localStorage.setItem("text", originalText);
   }, [originalText]);
+
+  const [lastProcessedText, setLastProcessedText] = useState(() => {
+    return localStorage.getItem("lastProcessedText") || "";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("lastProcessedText", lastProcessedText);
+  }, [lastProcessedText]);
 
   return (
     <Routes>
@@ -32,6 +47,8 @@ function App() {
             originalText={originalText}
             setKeyPoints={setKeyPoints}
             keyPoints={keyPoints}
+            lastProcessedText={lastProcessedText}
+            setLastProcessedText={setLastProcessedText}
           />
         }
       />
