@@ -1,5 +1,5 @@
-const token = import.meta.env.VITE_AI_API;
-// const token = "noWaste";
+// const token = import.meta.env.VITE_AI_API;
+const token = "noWaste";
 
 async function query(data) {
 	const response = await fetch(

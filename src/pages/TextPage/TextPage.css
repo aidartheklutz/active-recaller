@@ -24,6 +24,7 @@
 @media (max-width: 1100px) {
     .explanation {
         align-self: flex-start;
+        width: 90%;
     }
     .reading {
         flex-direction: column-reverse;
