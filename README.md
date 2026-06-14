@@ -1,7 +1,5 @@
 # Active Recaller
 
-## Short Description
-
 Active Recaller is a web app designed to help students memorize texts using the **Active Recall** technique. The user pastes the text they need to remember the contents of, reads it, and gets transferred to the writing section once ready. The user recreates the text from memory and then an AI compares the user's recall with the original text. The user is then provided with a convenient list of points they wrote correctly, missed, remembered inaccurately, or made up.
 
 ## About the Active Recall Technique
