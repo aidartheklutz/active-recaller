@@ -27,6 +27,18 @@ function AboutPage() {
       </p>
 
       <p>
+        Benjamin Franklin is often cited as an early example of active recall in
+        practice. He treated the texts of his mentors as memory exercises: he
+        would read the essay he wanted to memorize, put it away, and after a few
+        days he would try to reconstruct the text from memory. After finishing
+        his version of the text, he compared it to the original and took mental
+        notes of the points he had missed. This allowed him to improve his
+        writing and make it more persuasive. Benjamin Franklin's active recall
+        method is the one this website tries to utilize (with some slight
+        changes).
+      </p>
+
+      <p>
         Simply paste a text you want to learn, then try to write down everything
         you remember. The AI compares your recall against the key points it
         extracted and highlights:
@@ -48,6 +60,17 @@ function AboutPage() {
           original text.
         </li>
       </ul>
+
+      <p>
+        You can find a slightly more detailed description of the project{" "}
+        <a
+          href="https://github.com/aidartheklutz/active-recaller/blob/master/README.md"
+          target="_none"
+        >
+          here
+        </a>
+        .
+      </p>
 
       <h1>About the author</h1>
 
@@ -79,6 +102,7 @@ function AboutPage() {
       <div className="changelog">
         <h2>Changelog (1.1.2)</h2>
         <ul>
+          <li>slightly changed the about page</li>
           <li>fixed the layout on mobile devices</li>
           <li>added vercel analytics</li>
         </ul>
