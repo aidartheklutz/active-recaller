@@ -51,11 +51,12 @@ textarea {
 
 a {
   color: var(--link);
-  transition: color 1s ease;
+  transition: color 1s ease, transform 0.2s ease;
 }
 
 a:hover {
   color: var(--link-1);
+  transform: scale(1.03);
   cursor: pointer;
 }
 
