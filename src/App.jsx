@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { Route, Routes } from "react-router";
 import HomePage from "./pages/HomePage/HomePage";
 import TextPage from "./pages/TextPage/TextPage";
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <>
+      <Analytics />
       <NavBar />
       <div className="content">
         <Routes>
@@ -67,10 +69,7 @@ function App() {
               />
             }
           />
-          <Route
-            path="/about"
-            element={<AboutPage />}
-          />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
       </div>
     </>
