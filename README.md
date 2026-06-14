@@ -22,3 +22,5 @@ Benjamin Franklin is often cited as an early example of active recall in practic
 - **Incorrect**: Points where you got details wrong (like dates, names, or values).
 - **Missing**: Points you completely forgot to mention.
 - **Hallucinations**: Statements you added that weren't in the original text.
+
+This project was built using React + Vite.
