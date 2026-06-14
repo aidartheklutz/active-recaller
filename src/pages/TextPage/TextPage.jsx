@@ -66,7 +66,7 @@ function TextPage({
 
   return (
     <>
-      <h1>{randomTitle}</h1>
+      <h1 className="reading-title">{randomTitle}</h1>
       <div className="reading">
         <p id="paper">{originalText}</p>
         <div className="explanation">

@@ -3,7 +3,7 @@ import React from "react";
 function AboutPage() {
   return (
     <>
-      <p style={{ marginBottom: 0 }}>ver. 1.1</p>
+      <p style={{ marginBottom: 0 }}>ver. 1.1.1</p>
       <h1 style={{ marginTop: 0 }}>About Active Recaller</h1>
       <h2 style={{ marginBottom: 0 }}>
         «Active recall is a learning method where you test yourself by pulling

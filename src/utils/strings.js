@@ -50,3 +50,36 @@ ${keyPoints}
 
 USER TEXT:
 ${recallText}` };
+
+
+const newCheckPrompt = (keyPoints, recallText) => { return `You are a system that compares a source outline with a user recall.
+
+Your task is to evaluate recall accuracy, not writing quality. Paraphrases are allowed. Do not be strict about wording.
+
+Inputs:
+1. key points from a text
+2. user recalled text
+
+Rules:
+- correct: ideas supported by key points (including paraphrases or reasonable added detail)
+- missing: key points not present in user text
+- unsupported: claims that are contradicted by the key points OR introduce information not supported by them
+
+Important:
+- Do not label elaborations of valid ideas as unsupported
+- Use unsupported for both factual errors and invented information
+- If uncertain, prefer correct over unsupported
+- Every item in "correct", "missing", and "unsupported" must be directly traceable to either the key points or the user's text
+- If a key point is recalled incorrectly, place it in "unsupported" and do not also place it in "missing"
+- If there is not enough information, leave arrays empty
+
+Output only JSON:
+{"correct":[],"missing":[],"unsupported":[]}
+
+INPUT:
+
+KEY POINTS:
+${keyPoints}
+
+USER TEXT:
+${recallText}` };
