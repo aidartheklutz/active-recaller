@@ -1,6 +1,7 @@
 import React from "react";
 import { Navigate, useNavigate } from "react-router";
 import "./HomePage.css";
+import logo from "/active-recaller.png";
 
 function HomePage({ originalText, setOriginalText }) {
   const navigate = useNavigate();
@@ -13,7 +14,10 @@ function HomePage({ originalText, setOriginalText }) {
   return (
     <>
       <div className="introduction">
-        <h1 id="title">Active Recaller</h1>
+        <div className="introduction-title">
+          <img src={logo} />
+          <h1>Active Recaller</h1>
+        </div>
         <p>Paste the text you want to memorize and hit start!</p>
         <div className="original-text-input">
           <textarea
