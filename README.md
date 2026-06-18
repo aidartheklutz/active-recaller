@@ -40,11 +40,11 @@ Benjamin Franklin is often cited as an early example of active recall in practic
 
 ![TextPage](public/screenshots/reading.png)
 
-### Recall Writing Page
+### Writing Page
 
 ![WritingPage](public/screenshots/recall.png)
 
-### Recall Feedback Page
+### Writing Page (Feedback)
 
 ![WritingPage Results](public/screenshots/feedback-0.png)
 
