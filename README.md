@@ -6,7 +6,27 @@ Active Recaller is a web app designed to help students memorize texts using the 
 
 ### Active Recall is a study method where a person first makes themselves familiar with the material they need to remember and then actively tests their memory.
 
-Benjamin Franklin is often cited as an early example of active recall in practice. He treated the texts of his mentors as memory exercises: he would read the essay he wanted to memorize, put it away, and after a few days he would try to reconstruct the text from memory. After finishing his version of the text, he compared it to the original and took mental notes of the points he had missed. This allowed him to improve his writing and make it more persuasive. Benjamin Franklin's active recall method is the one this website tries to utilize (with some slight changes). 
+Benjamin Franklin is often cited as an early example of active recall in practice. He treated the texts of his mentors as memory exercises: he would read the essay he wanted to memorize, put it away, and after a few days he would try to reconstruct the text from memory. After finishing his version of the text, he compared it to the original and took mental notes of the points he had missed. This allowed him to improve his writing and make it more persuasive. Benjamin Franklin's active recall method is the one this website tries to utilize (with some slight changes).
+
+## Screenshots
+
+### Home Page
+
+![HomePage](public/screenshots/home.png)
+
+### Reading Page
+
+![TextPage](public/screenshots/reading.png)
+
+### Recall Writing Page
+
+![WritingPage](public/screenshots/recall.png)
+
+### Recall Feedback Page
+
+![WritingPage Results](public/screenshots/feedback-0.png)
+
+![WritingPage Results](public/screenshots/feedback-1.png)
 
 ## How it works
 
